@@ -2,7 +2,7 @@ import requests
 import json
 
 #set API key (necessary que acess information)
-api_key = 'H6LR5HY9WQHDLWGZ'
+api_key = 'API_Key'
 
 #symbol of the index we want to know
 symbol = '^STOXX'
@@ -14,6 +14,6 @@ url = f'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol={s
 r = requests.get(url)
 print(r) #if this value is 200, it works and communication was set
 
-data = json.loads(response.text)
+data = json.loads(r.text)
 
 print(data)
